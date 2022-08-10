@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Skins & Poubelles</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<canvas></canvas>
+
+
+
+<div id="scrollBar" style="display: none">
+    <nav class="main-menu">
+        <button id="buttonUp" onclick="clickUp()"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"/></svg></button>
+
+        <img id="loading" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Seraphine_0.jpg" alt="Not loaded" style="position: absolute; top: 8%; right: 6%; border-radius: 25px;" onmouseover="showSplash() ">
+
+
+
+
+
+
+        <div class="container">
+            <form id="coolFlowForm">
+                <div class="group">
+                    <input type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Cool</label>
+                </div>
+
+                <div class="group">
+                    <input type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Flow</label>
+                </div>
+
+                <div class="validation"><p>Valider</p></div>
+            </form>
+        </div>
+
+
+        <button id="buttonDown" onclick="clickDown()"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"/></svg></button>
+
+
+
+    </nav>
+</div>
+
+
+
+<div id="splashBackground" style="position:fixed; top:0; left:0; display:none; width:1357px;height:100%; background: hsla(0, 0%, 0%, 0.4);"></div>
+<img id="splash" src="" alt="" style="position: fixed; top: 6%; left: 40px; width: 1277px; border-radius: 15px" onclick="hideSplash()">
+
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #454543 74%);
+}
+
+.main-menu {
+    background:hsl(0 0% 0% / 0.2);
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:350px;
+    height:100%;
+    right:0;
+    -webkit-transition:width .2s linear;
+    transition:width .2s linear;
+}
+
+
+button {
+    position: absolute;
+    top: 40px;
+    right: 50%;
+    cursor: pointer;
+    background-color: hsla(0, 0%, 0%, 0);
+    border: none;
+    border-radius: 50%;
+}
+
+button svg {
+    position: absolute;
+    fill: white;
+    width: 30px;
+    height: 30px;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0.7;
+}
+
+
+button:hover svg {
+    animation: bounce 1.5s infinite linear;
+    opacity: 1;
+}
+
+@keyframes bounce {
+    0% {transform: translateX(-50%) translateY(-50%)}
+    50% {transform: translateX(-50%) translateY(-65%)}
+    100% {transform: translateX(-50%) translateY(-50%)}
+}
+
+#buttonDown {transform: rotate(180deg)  translate(0px, -885px)}
+
+
+
+.validation {
+    position: fixed;
+    top:835px;
+    right: 130px;
+    font-family: 'Roboto';
+
+    color: #999;
+    width: 100px;
+    height: 40px;
+    background:transparent;
+    border: 1px solid #999;
+    border-radius: 10px;
+}
+
+.validation p {
+    margin: 0;
+    position: absolute;
+    user-select: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.validation:hover   {
+    border: 1px solid white;
+    color:white;
+    background: #999;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease;
+
+}
+
+.validation:active   {
+    border: 1px solid white;
+    color:white;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+}
+
+
+
+.container 		{
+    position: fixed;
+    top: 630px;
+    font-family:'Roboto';
+    width:300px;
+    margin:30px auto 0;
+    display:block;
+    background:transparent;
+    padding:10px 50px 50px;
+}
+
+
+
+/* form starting stylings ------------------------------- */
+.group 			  {
+    position:relative;
+    margin-bottom:45px;
+}
+input 				{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    background: transparent;
+    width:235px;
+    border:none;
+    border-bottom:1px solid #999;
+}
+input:focus 		{ outline:none; color: white}
+
+/* LABEL ======================================= */
+label {
+    color:#999;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+    top:-20px;
+    font-size:14px;
+    color:whitesmoke;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:250px; }
+.bar:before, .bar:after 	{
+    content:'';
+    height:2px;
+    width:0;
+    bottom:0;
+    position:absolute;
+    background:white;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+.bar:before {
+    left:50%;
+}
+.bar:after {
+    right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position:absolute;
+    height:60%;
+    width:100px;
+    top:25%;
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from { background:whitesmoke; }
+    to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background:whitesmoke; }
+    to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background:whitesmoke; }
+    to 	{ width:0; background:transparent; }
+}
+
+
+
+#coolFlowForm {
+    position: center;
+    top: 500px;
+}
