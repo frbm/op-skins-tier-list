@@ -105,7 +105,7 @@ function initRatings(method) {
     } else {
         if (method === 'random') {
             for (let i = 0; i < allSkins.length; i++) {
-                ratings.push([10 * Math.random() - 5, 10 * Math.random() - 5])
+                ratings.push([(10 * Math.random() - 5).toString(), (10 * Math.random() - 5).toString()])
             }
         } else {
             if (method === 'load') {
@@ -243,7 +243,7 @@ class Dot {
         if (this.isHovered || this.isClicked) {
             this.color = 'white'
         } else {
-            this.color = 'hsla(' + Math.atan2(this.x, this.y) * (180 / Math.PI) + ',90%,' + (20 + (this.z - dz) * 7) + '%,' + this.distanceToCamera / rho + ')'
+            this.color = 'hsla(' + Math.atan2(this.x, this.y) * (180 / Math.PI) + ',90%,' + (20 + (this.z - dz) * 6) + '%,' + this.distanceToCamera / rho + ')'
         }
 
     }
